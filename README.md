@@ -1,7 +1,11 @@
 # BCI-USER 
 
 **Diagrama Inicial**
-![Diagrama](https://github.com/joph1994/bci-user/assets/52262431/3392a22a-84b9-4a74-a6ba-46c2a8edc154)
+![image](https://github.com/joph1994/bci-user/assets/52262431/dcbbecef-6eb3-4436-8aea-e3e1ee851b0b)
+![image](https://github.com/joph1994/bci-user/assets/52262431/192a79a1-721e-4cb0-8ba1-ea18334b5868)
+![Diagrama](https://github.com/joph1994/bci-user/assets/52262431/974673ec-6452-495e-9849-4be716ecbf2e)
+
+
 
 ## Pasos para probar
 
