@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.9'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'groovy'
+}
+
+group = 'cl.bci'
+version = '0.0.1-SNAPSHOT'
+description = 'Demo para la creacion y mantenimiento de un usuario.'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.spockframework:spock-core:2.4-M1-groovy-4.0'
+    testImplementation 'org.apache.groovy:groovy-all:4.0.16'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+tasks.withType(GroovyCompile) {
+    groovyOptions.encoding = 'UTF-8'
+}
+
+sourceSets {
+    test {
+        groovy {
+            srcDirs = ['src/test/groovy']
+            include '**/*.groovy'
+        }
+    }
+}
